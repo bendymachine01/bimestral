@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZØREN | Acceso privado</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="bg-black text-white">
+
+    <main class="min-h-screen flex items-center justify-center px-6">
+
+        <div class="w-full max-w-md">
+
+            <div class="border border-gray-800 rounded-xl p-8">
+
+                <p class="text-gray-500 mb-3">
+                    ACCESO PRIVADO
+                </p>
+
+                <h1 class="text-3xl font-bold mb-3">
+                    ZØREN
+                </h1>
+
+                <p class="text-gray-400 mb-8">
+                    Ingresa la contraseña para acceder.
+                </p>
+
+
+                <form onsubmit="entrar(event)">
+
+                    <label for="password" class="block mb-2">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Ingresa la contraseña"
+                        class="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-3 outline-none focus:border-white"
+                        required>
+
+
+                    <p id="error" class="text-red-400 text-sm mt-3 hidden">
+                        Contraseña incorrecta.
+                    </p>
+
+
+                    <button
+                        type="submit"
+                        class="w-full bg-white text-black px-6 py-3 rounded-lg font-semibold mt-6 hover:bg-gray-300">
+
+                        Entrar
+
+                    </button>
+
+                </form>
+
+
+                <a href="acceso.html"
+                   class="block text-center text-gray-500 text-sm mt-6 hover:text-white">
+
+                    ← Volver
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        function entrar(event) {
+
+            event.preventDefault();
+
+            const password = document.getElementById("password").value;
+
+            const error = document.getElementById("error");
+
+
+            if (password === "1382010") {
+
+                window.location.href = "admin.html";
+
+            } else {
+
+                error.classList.remove("hidden");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
