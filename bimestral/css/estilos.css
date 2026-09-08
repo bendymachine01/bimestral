@@ -1,0 +1,133 @@
+/* ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* MENÚ */
+
+header {
+    border-bottom: 1px solid #222;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #999;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* TÍTULOS */
+
+h1,
+h2,
+h3 {
+    color: #fff;
+}
+
+/* BOTONES */
+
+button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* FORMULARIOS */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.form-input {
+    width: 100%;
+    background-color: #050505;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #666;
+}
+
+/* TARJETAS */
+
+.card {
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #fff;
+}
+
+/* GALERÍA */
+
+.gallery-box {
+    height: 250px;
+    border: 1px solid #222;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #666;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    border-top: 1px solid #222;
+}
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+}
