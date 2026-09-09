@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acceso ZØREN</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="bg-black text-white">
+
+<main class="max-w-md mx-auto px-6 py-20">
+
+    <h1 class="text-4xl font-bold mb-3">
+        Acceso ZØREN
+    </h1>
+
+    <p class="text-gray-400 mb-8">
+        Área privada.
+    </p>
+
+    <form id="formulario" class="space-y-5">
+
+        <div>
+
+            <label>Contraseña</label>
+
+            <input
+                type="password"
+                id="password"
+                class="form-input"
+                placeholder="Contraseña">
+
+        </div>
+
+        <button
+            type="submit"
+            class="w-full bg-white text-black py-3 rounded-lg font-semibold">
+
+            Entrar
+
+        </button>
+
+    </form>
+
+    <p id="mensaje" class="text-red-500 mt-4"></p>
+
+</main>
+
+<script>
+
+document.getElementById("formulario").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const password = document.getElementById("password").value;
+    const mensaje = document.getElementById("mensaje");
+
+    if (password === "1382010") {
+
+        window.location.href = "admin.html";
+
+    } else {
+
+        mensaje.textContent = "Contraseña incorrecta.";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
